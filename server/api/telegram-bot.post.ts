@@ -27,9 +27,10 @@ export default defineEventHandler(async event => {
 
             // Respond to the received message
             if (text) {
-                await bot.sendMessage(chatId, text, {
-                    message_thread_id: '16014'
-                })
+                // await bot.sendMessage(chatId, text, {
+                //     message_thread_id: '16014'
+                // })
+                await bot.sendMessage(chatId, text, { parse_mode: 'markdownv2' })
             }
         }
         return { status: 'success', message: 'Alert successfully!' }

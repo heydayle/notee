@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxt/image', 'nuxt-vue3-google-signin', '@sidebase/nuxt-auth'],
+  modules: ['@nuxt/image', 'nuxt-vue3-google-signin', '@sidebase/nuxt-auth', '@nuxt/ui', '@vueuse/nuxt'],
   image: {
     dir: 'assets/images'
   },
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
       type: 'authjs'
     },
     globalAppMiddleware: {
-      isEnabled: true
+      isEnabled: false
     }
   }
 })
